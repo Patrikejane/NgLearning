@@ -1,0 +1,52 @@
+<h1>Assignment one</h1>
+<p>User Name</p>
+<input
+type="text"
+name=""
+value=""
+[(ngModel)] = "username">
+
+<hr>
+<p>Entered User Name :  {{ username }}</p>
+
+<button
+class="btn btn-primary"
+type="button"
+name="button"
+[disabled] = "isDisabled()"
+(click) = "resetUsername()"> Reset Username</button>
+
+
+ <h1>implemented the solution</h1>
+<p>
+button disabling function and the resetUsername function directly
+affects by the value of the user name so for that used Two way bind
+for the 'username' input.<br>
+for the disabling the button used the property bind and used below
+method
+as the expression <br>
+
+<b>isDisabled()
+  return this.username.length == 0 ? true : false;</b>
+<br>
+
+as username two way binded in the isDisabled method
+ always the this.username.length will be changed and
+ at the movement it bicomes 0 method will return true
+ and button will be  disabled = true , and when this.username.length
+ becomes greater than 0 button will be  disabled = false.
+ <br>
+
+to reset the input field
+used a event bind for the button click event calling below
+method
+<b>resetUsername()
+  this.username = '';</b>
+<br>
+as username input two way binded only need to make <b>this.username = ''</b>
+
+<br>
+For the practise purpose created diferent component and side that
+implemented the solution, as the assigment cover all the learned topics of the
+video lecture no questions encounted.
+</p>
